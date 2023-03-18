@@ -17,6 +17,6 @@ jobs:
         pip install -r requirements.txt
     - name: Test with flake8 and django tests
       run: |
-        python -m 
+        python -m flake8
         cd infra_project/
         python manage.py test
