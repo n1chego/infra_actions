@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/infra_actions:v0.03.23
+          tags: ${{ secrets.DOCKER_USERNAME }}/infra_action:v0.03.23
   deploy:
     name: Deploy project to the server
     runs-on: ubuntu-latest
