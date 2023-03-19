@@ -52,6 +52,6 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_action
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/infra_action:v0.03.23
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/infra_action
+            sudo docker run --rm -d -p 5000:5000 ${{ secrets.DOCKER_USERNAME }}/infra_action:v0.03.23
